@@ -1,9 +1,9 @@
 const arrayProductos = [];
 
-const producto1 = new Producto(1, 'bicicleta', 6500);
-const producto2 = new Producto(2, 'neopreno', 350);
-const producto3 = new Producto(3, 'zapatillas', 145);
-const producto4 = new Producto(4, 'todo', 6995);
+const producto1 = new Producto(1, 'Bicicleta', 6500);
+const producto2 = new Producto(2, 'Neopreno', 350);
+const producto3 = new Producto(3, 'Zapatillas', 145);
+const producto4 = new Producto(4, 'Todo', 6995);
 
 arrayProductos.push(producto1, producto2, producto3, producto4);
 
@@ -21,7 +21,7 @@ const ordenarMayorMenor = () => {
 
 const mostrarListaOrdenada = () => {
     let array = [];
-    arrayProductos.forEach(producto => array.push(producto.nombre+' $'+producto.precio));
+    arrayProductos.forEach(producto => array.push(producto.nombre+': ' +producto.precio+'€'));
     alert('Lista de precios:'+'\n'+array.join('\n'));
 };
 
@@ -33,7 +33,7 @@ function comprarProductos() {
     let seguirComprando = false;
 
     do {
-        productoNombre = prompt('¿Quieres comprar una bicicleta, un neopreno, unas zapatillas o todo?', 'Ej: todo');
+        productoNombre = prompt('¿Quieres comprar una Bicicleta, un Neopreno, unas Zapatillas o Todo?', 'Ej: todo');
         productoCantidad = parseInt(prompt('¿Cuántas unidades quieres comprar?'));
 
         const producto = arrayProductos.find(producto => producto.nombre === productoNombre);
