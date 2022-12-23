@@ -71,4 +71,10 @@ const eliminarProductoCarrito = (productoId) => {
     pintarCarrito(carritoActualizado);
 };
 
-export { agregarAlCarrito, validarProductoRepetido, pintarCarrito, eliminarProductoCarrito };
+const eliminarTodoElCarrito = () => {
+   const carritoActualizado = [];
+
+    actualizarTotalesCarrito(carritoActualizado);
+    pintarCarrito(carritoActualizado);
+};
+export { agregarAlCarrito, validarProductoRepetido, pintarCarrito, eliminarProductoCarrito, eliminarTodoElCarrito };
